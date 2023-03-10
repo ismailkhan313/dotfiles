@@ -2,7 +2,7 @@
 
 This repo contains system configurations for many tools and packages utilities on all my OS's. 
 
-- Linux (popOS)
+- Linux
 - MacOS 
 
 # linux-sys-configs
