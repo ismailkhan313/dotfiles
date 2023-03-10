@@ -4,11 +4,12 @@ This repo contains system configurations for many tools and packages utilities o
 
 - Linux (popOS)
 - MacOS 
-- Win11
 
-# Linux Sys Configs
+# linux-sys-configs
 
 .vimrc
 .tmux.conf
 
+# mac-sys-configs 
+- yabairc configs
 
