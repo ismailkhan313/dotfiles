@@ -1,0 +1,8 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "city-lights-icons-vsc-light",
+  "files.autoSave": "onFocusChange",
+  "editor.tabSize": 2
+}

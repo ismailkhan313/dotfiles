@@ -1,4 +1,8 @@
-# yabairc file 
+# --------------------------------
+# .yabairc config -- viz1er 
+# --------------------------------
+# install yabai => brew install koekeishiya/formulae/yabai
+# start yabai => brew services start yabai
 
 # default layout (bsp, stack, or float)
 yabai -m config layout bsp 

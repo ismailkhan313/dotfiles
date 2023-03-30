@@ -1,15 +1,15 @@
-## System Configs 
+## Dotfiles README
 
-This repo contains system configurations for many tools and packages utilities on all my OS's. 
+Repo contains all system configuration files for the packages I used on all operating systems. 
 
-- Linux
-- MacOS 
-
-# linux-sys-configs
-
+# linux
 .vimrc
 .tmux.conf
 
-# mac-sys-configs 
-- yabairc configs
+# mac-os
+.yabairc
+.skhd
 
+## TO-DO
+- Add steps for symlinking manually
+- Create a sym link script with python

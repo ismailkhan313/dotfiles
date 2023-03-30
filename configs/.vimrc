@@ -1,6 +1,6 @@
 " Title: .vimrc configurations 
-" Description: A minimal .vimrc configuration. Adapted from: https://vim.wikia.com/wiki/Example_vimrc
-" Author: Ismail K. 
+" Description: A minimal .vimrc configuration
+" Author: viz1er 
 
 "---------------------------------------------
 
