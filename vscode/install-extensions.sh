@@ -2,11 +2,10 @@
 # script to install vscode extensions
 # check all vscode extensions installed => code --list-extensions | xargs -L 1
 
-# execute command
+# execute command with sudo bash install-extensions.sh
 # -------------------
-# curl -s https://raw.githubusercontent.com/viz1er/dotfiles/vscode/main/install-extensions.sh | /bin/bash
+curl -s https://raw.githubusercontent.com/viz1er/dotfiles/main/vscode/install-extensions.sh | /bin/bash
 
-## REPLACE ABOVE CURL WITH mine 
 extensions=(
   bungcip.better-toml
   eamodio.gitlens

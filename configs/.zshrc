@@ -5,9 +5,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Path to XDG_CONFIG_HOME to .config location
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Starship.rs tokyo-night prompt will default over this. This theme only occurs as a backup. 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="frisk"
+ZSH_THEME="half-life"
 
 # Auto update behaviour 
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
@@ -25,7 +28,7 @@ plugins=(git zsh-autocomplete zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES
-alias ls="ls -lah"
+alias ls='ls -lah'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
@@ -41,5 +44,6 @@ if [ -f '/Users/IXK673C/GCP/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/IXK
 if [ -f '/Users/IXK673C/GCP/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/IXK673C/GCP/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Start starship prompt 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+# test !!! 
 
