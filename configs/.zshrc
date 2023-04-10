@@ -33,6 +33,10 @@ alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
 
+# KEY BINDINGS 
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
+
 # PATH EXPORTS
 export PATH=$PATH:/Users/IXK673C/.spicetify
 export PATH=/Users/IXK673C/.local/bin:$PATH # path for lvim
@@ -45,5 +49,4 @@ if [ -f '/Users/IXK673C/GCP/google-cloud-sdk/completion.zsh.inc' ]; then . '/Use
 
 # Start starship prompt 
 # eval "$(starship init zsh)"
-# test !!! 
 
