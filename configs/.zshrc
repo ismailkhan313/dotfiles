@@ -2,6 +2,8 @@
 # .zshrc config -- viz1er 
 # --------------------------------
 
+echo "hello friend"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
