@@ -2,13 +2,22 @@
 # .zshrc config -- viz1er 
 # --------------------------------
 
+echo "hello friend"
+
+## VARIABLES ## 
+
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Path to XDG_CONFIG_HOME to .config location
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# Starship.rs tokyo-night prompt will default over this. This theme only occurs as a backup. 
+export EDITOR="code"
+
+# Move zshcompdump to ~/.cache/zsh
+# compinit -d ~/.cache/zsh/.zcompdump*
+
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="half-life"
 
@@ -23,17 +32,18 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 COMPLETION_WAITING_DOTS="true"
 
-# PLUGINS
-plugins=(git zsh-autocomplete zsh-syntax-highlighting)
+## PLUGINS ##
+plugins=(git zsh-autocomplete zsh-syntax-highlighting tmux )
 source $ZSH/oh-my-zsh.sh
 
-# ALIASES
+## ALIASES ##
 alias ls='ls -lah'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
+alias jwdl='py ~/Codebase/jwplayer-downloader/jwplayer_downloader.py'
 
-# KEY BINDINGS 
+## KEY BINDINGS ##
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 
