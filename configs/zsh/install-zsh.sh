@@ -1,5 +1,6 @@
 #!/bin/bash
 # runs for macos and linux operating systems
+# install in terminal with sudo ./install-zsh.sh
 
 # create .zshrc in home dir
 cd $HOME
