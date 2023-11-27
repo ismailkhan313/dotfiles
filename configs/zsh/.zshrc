@@ -2,10 +2,6 @@
 # .zshrc config -- viz1er 
 # --------------------------------
 
-echo "hello friend"
-
-## VARIABLES ## 
-
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -15,25 +11,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export EDITOR="code"
 
-# Move zshcompdump to ~/.cache/zsh
-# compinit -d ~/.cache/zsh/.zcompdump*
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="half-life"
 
-# Auto update behaviour 
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-zstyle ':omz:update' frequency 0
-
-# Enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-COMPLETION_WAITING_DOTS="true"
-
 ## PLUGINS ##
-plugins=(git zsh-autocomplete zsh-syntax-highlighting tmux )
+plugins=(git zsh-autocomplete zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 ## ALIASES ##
@@ -49,11 +30,35 @@ bindkey "^[^[[D" backward-word
 
 # PATH EXPORTS
 export PATH=$PATH:/Users/IXK673C/.spicetify
-export PATH=/Users/IXK673C/.local/bin:$PATH # path for lvim
 
-export PATH=$PATH:/Users/IXK673C/GCP/cloud-sql-proxy # work 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/IXK673C/GCP/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/IXK673C/GCP/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/IXK673C/GCP/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/IXK673C/GCP/google-cloud-sdk/completion.zsh.inc'; fi
+# Load Angular CLI autocompletion
+source <(ng completion script)
 
+# NVM lazy loaded
+export NVM_DIR="$HOME/.config/nvm"
+load_nvm() {
+    unset -f nvm node npm npx
+    export NVM_DIR="$HOME/.config/nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+
+nvm() {
+    load_nvm
+    nvm "$@"
+}
+
+node() {
+    load_nvm
+    node "$@"
+}
+
+npm() {
+    load_nvm
+    npm "$@"
+}
+
+npx() {
+    load_nvm
+    npx "$@"
+}
