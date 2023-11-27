@@ -62,3 +62,11 @@ npx() {
     load_nvm
     npx "$@"
 }
+
+HISTORY="~/.zsh-history" # Path to zsh history file
+HISTORY_LOG="path/to/where/you/wan't/to/save/history"
+MAX_HISTORY=100 # Maximum lines to keep in history
+
+if [[ $(expr $(wc -l < $HISTORY) \> $MAX_HISTORY) = "1" ]]; then
+    cat $HISTORY >> $HISTORY_LOG && echo '' > $HISTORY
+fi
