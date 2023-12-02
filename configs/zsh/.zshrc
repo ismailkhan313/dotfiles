@@ -3,9 +3,10 @@
 # --------------------------------
 
 # Oh My Zsh Configuration
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="amuse"
-plugins=(git zsh-autocomplete zsh-syntax-highlighting)
+export ZSH="$HOME/.config/zsh/.oh-my-zsh"
+ZSH_THEME="dst"
+plugins=(git zsh-autocomplete zsh-syntax-highlighting web-search autojump)
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
 
 # Environment Variables
@@ -17,6 +18,7 @@ export EDITOR="code"
 # PATH Configuration
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/Users/IXK673C/.spicetify"
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Aliases
 alias ls='ls -lah'
@@ -24,13 +26,13 @@ alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
 alias jwdl='py ~/Codebase/jwplayer-downloader/jwplayer_downloader.py'
+alias zshrc='code ~/.config/zsh'
+alias sourcezsh='source ~/.config/zsh/.zshrc'
+alias dotfiles='code ~/Codebase/dotfiles/configs'
 
 # Key Bindings
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
-
-# Angular CLI Autocompletion
-source <(ng completion script)
 
 # Node Version Manager (NVM) Lazy Loading
 load_nvm() {

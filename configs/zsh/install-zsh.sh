@@ -20,6 +20,9 @@ rm -rf $ZSH_CUSTOM/themes/example.zsh-theme
 cd $ZSH_CUSTOM/plugins
 git clone git@github.com:marlonrichert/zsh-autocomplete.git
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+git clone git@github.com:sinetoami/web-search.git
+git clone git@github.com:fdellwing/zsh-bat.git
+
 # .zshrc will have these plugins already included 
 
 # symlink repo .zshrc to local .zshrc
