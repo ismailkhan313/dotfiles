@@ -21,7 +21,8 @@ export PATH="$PATH:/Users/IXK673C/.spicetify"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Aliases
-alias ls='ls -lah'
+alias ls='exa -lah --created --icons'
+alias exatree='exa --tree --long --icons'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
