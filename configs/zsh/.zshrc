@@ -21,15 +21,15 @@ export PATH="$PATH:/Users/IXK673C/.spicetify"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Aliases
-alias ls='exa -lah --created --icons'
+alias zshrc='code ~/.config/zsh'
+alias sourcezsh='source ~/.config/zsh/.zshrc'
+alias dotfiles='code ~/Codebase/dotfiles/configs'
+alias ls='exa -lah --created --icons --sort=type'
 alias exatree='exa --tree --long --icons'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
 alias jwdl='py ~/Codebase/jwplayer-downloader/jwplayer_downloader.py'
-alias zshrc='code ~/.config/zsh'
-alias sourcezsh='source ~/.config/zsh/.zshrc'
-alias dotfiles='code ~/Codebase/dotfiles/configs'
 
 # Key Bindings
 bindkey "^[^[[C" forward-word
