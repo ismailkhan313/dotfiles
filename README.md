@@ -4,21 +4,21 @@ Welcome to my dotfiles repository! Here, you'll find my preferred startup config
 
 ## Prerequisites:
 
--   Familiarity with the terminal or command prompt.
--   Make sure you have administrative permissions.
+- Familiarity with the terminal or command prompt.
+- Make sure you have administrative permissions.
 
 ## Contents:
 
--   **Fonts**: JetBrains Mono NL & FiraCode.
--   **iTerm2**: Custom profiles and color schemes.
--   **oh-my-zsh**: Configurations, plugins, and scripts for a better Zsh experience.
+- **Fonts**: JetBrains Mono NL & FiraCode.
+- **iTerm2**: Custom profiles and color schemes.
+- **oh-my-zsh**: Configurations, plugins, and scripts for a better Zsh experience.
 
 ## Setup:
 
 ### 1. Install Fonts:
 
--   JetBrains Mono NL
--   FiraCode
+- JetBrains Mono NL
+- FiraCode
 
 ### 2. Setup iTerm2:
 
@@ -59,6 +59,15 @@ d. Replace `.zshrc` with my custom configurations:
 `bash
     cp configs/zsh/.zshrc ~/.zshrc
     `
+
+### 4. Install from Brewfile
+
+`brew bundle dump` creates Brewfile in the current directory from currently-installed packages
+Navigate to dotfiles directory (/Codebase/dotfiles/configs)
+
+`brew bundle` installs everything from the Brewfile
+
+`brew bundle --help` for more options
 
 ## Note:
 

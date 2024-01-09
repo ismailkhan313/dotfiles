@@ -61,3 +61,4 @@ npx() {
     load_nvm
     npx "$@"
 }
+export PATH=$PATH:/Users/viz1er/.spicetify
