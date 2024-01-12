@@ -28,7 +28,9 @@ git clone git@github.com:fdellwing/zsh-bat.git
 # symlink repo .zshrc to local .zshrc
 # .zshrc must not exist for symlink to work in ~/
 echo "Creating symlink to .zshrc in home directory."
-ln -s ~/Codebase/dotfiles/configs/.zshrc ~/.zshrc
+ln -s ~/Codebase/dotfiles/configs/zsh/.zshenv ~/.zshenv
+ln -s ~/Codebase/dotfiles/configs/zsh/.zprofile ~/.config/zsh/.zprofile
+ln -s ~/Codebase/dotfiles/configs/zsh/.zshrc ~/.config/zsh/.zshrc
 echo "Success!!!" 
 
 ## exit 
