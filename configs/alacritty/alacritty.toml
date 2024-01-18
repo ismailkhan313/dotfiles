@@ -1,11 +1,16 @@
 # $HOME/.config/alacritty
 # by viz1er 
 
+# Check all configs with `man 5 alacritty`
+
 live_config_reload = true
 
 [window]
 
 opacity = 0.9
+blur = true
+dynamic_title = true
+option_as_alt= "Both"
 
 class.general = "Alacritty"
 class.instance = "Alacritty"
@@ -53,3 +58,11 @@ bold_italic.family = "JetBrainsMonoNL Nerd Font"
 
 [scrolling]
 history = 10000
+
+[keyboard]
+bindings = [
+    { key = "Right", mods = "Alt", chars  = "\033f" }
+    { key = "Left", mods = "Alt", chars = "\033b" }
+]
+
+# need to figure this out - https://github.com/alacritty/alacritty/issues/62 and https://github.com/alacritty/alacritty/issues/93 
