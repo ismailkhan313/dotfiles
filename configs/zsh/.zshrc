@@ -9,6 +9,10 @@ plugins=(git zsh-autocomplete zsh-syntax-highlighting web-search autojump)
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
 
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/IXK673C/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
 # Environment Variables
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 export XDG_CONFIG_HOME="$HOME/.config"
