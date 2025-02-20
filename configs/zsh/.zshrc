@@ -9,6 +9,10 @@ plugins=(git zsh-autocomplete zsh-syntax-highlighting web-search autojump)
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
 
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/IXK673C/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
 # Environment Variables
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -19,6 +23,11 @@ export EDITOR="code"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/Users/IXK673C/.spicetify"
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Aliases
 alias zshrc='code ~/.config/zsh'
@@ -62,6 +71,3 @@ npx() {
     npx "$@"
 }
 export PATH=$PATH:/Users/viz1er/.spicetify
-
-# Created by `pipx` on 2024-07-10 21:16:05
-export PATH="$PATH:/Users/viz1er/.local/bin"
