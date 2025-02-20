@@ -24,11 +24,6 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/Users/IXK673C/.spicetify"
 export PATH="/opt/homebrew/bin:$PATH"
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # Aliases
 alias zshrc='code ~/.config/zsh'
 alias sourcezsh='source ~/.config/zsh/.zshrc'
