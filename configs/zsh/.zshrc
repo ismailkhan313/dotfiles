@@ -24,8 +24,8 @@ export PATH="/opt/homebrew/bin:$PATH"
 alias zshrc='code ~/.config/zsh'
 alias sourcezsh='source ~/.config/zsh/.zshrc'
 alias dotfiles='code ~/Codebase/dotfiles/configs'
-alias ls='exa -lah --created --icons --sort=type'
-alias exatree='exa --tree --long --icons'
+alias ls='eza -lah --created --icons --sort=type'
+alias exatree='eza --tree --long --icons'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
@@ -62,3 +62,6 @@ npx() {
     npx "$@"
 }
 export PATH=$PATH:/Users/viz1er/.spicetify
+
+# Created by `pipx` on 2024-07-10 21:16:05
+export PATH="$PATH:/Users/viz1er/.local/bin"

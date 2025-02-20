@@ -20,6 +20,8 @@ Welcome to my dotfiles repository! Here, you'll find my preferred startup config
 - JetBrains Mono NL
 - FiraCode
 
+Install from https://www.nerdfonts.com/
+
 ### 2. Setup iTerm2:
 
 Make your terminal feel at home with my customizations.
