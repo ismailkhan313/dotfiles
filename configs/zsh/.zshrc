@@ -9,10 +9,6 @@ plugins=(git zsh-autocomplete zsh-syntax-highlighting web-search autojump)
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/IXK673C/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 # Environment Variables
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -28,7 +24,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 alias zshrc='code ~/.config/zsh'
 alias sourcezsh='source ~/.config/zsh/.zshrc'
 alias dotfiles='code ~/Codebase/dotfiles/configs'
-alias ls='eza -lah --created --icons --sort=type'
 alias exatree='eza --tree --long --icons'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
@@ -65,4 +60,5 @@ npx() {
     load_nvm
     npx "$@"
 }
+
 export PATH=$PATH:/Users/viz1er/.spicetify
