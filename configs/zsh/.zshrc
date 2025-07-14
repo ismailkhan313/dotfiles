@@ -9,6 +9,9 @@ plugins=(git zsh-autocomplete zsh-syntax-highlighting web-search autojump)
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
 
+echo 'export PATH=$PATH:$(npm config get prefix)/bin' >> ~/.zshrc
+
+
 # Environment Variables
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -62,3 +65,4 @@ npx() {
 }
 
 export PATH=$PATH:/Users/viz1er/.spicetify
+export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"
