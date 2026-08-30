@@ -12,6 +12,7 @@ Welcome to my dotfiles repository! Here, you'll find my preferred startup config
 - **Fonts**: JetBrains Mono NL & FiraCode.
 - **iTerm2**: Custom profiles and color schemes.
 - **zsh**: Plain zsh config (no framework) — see `configs/zsh/README.md`.
+- **Terminal.app**: Always opens maximized — see `configs/terminal/README.md`.
 
 ## Setup:
 

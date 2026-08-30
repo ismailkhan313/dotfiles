@@ -11,7 +11,7 @@ SAVEHIST=10000
 autoload -Uz compinit && compinit
 
 # Prompt
-PROMPT='%~ %# '
+PROMPT='%F{cyan}%~%f %F{green}%#%f '
 
 # Spicetify
 [ -d "$HOME/.spicetify" ] && export PATH="$HOME/.spicetify:$PATH"
