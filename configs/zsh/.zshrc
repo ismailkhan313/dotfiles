@@ -1,16 +1,16 @@
 # --------------------------------
-# .zshrc config -- viz1er 
+# .zshrc config -- viz1er
 # --------------------------------
+
+# Set up Homebrew environment. This should be at the top.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Oh My Zsh Configuration
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
-ZSH_THEME="dst"
+ZSH_THEME="avit"
 plugins=(git zsh-autocomplete zsh-syntax-highlighting web-search autojump)
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 source $ZSH/oh-my-zsh.sh
-
-echo 'export PATH=$PATH:$(npm config get prefix)/bin' >> ~/.zshrc
-
 
 # Environment Variables
 export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
@@ -18,20 +18,27 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export NVM_DIR="$HOME/.config/nvm"
 export EDITOR="code"
 
-# PATH Configuration
-export PATH="/usr/local/bin:$PATH"
-export PATH="$PATH:/Users/IXK673C/.spicetify"
-export PATH="/opt/homebrew/bin:$PATH"
+# NPM global packages
+NPM_PACKAGES_PATH="$(npm config get prefix)/bin"
+if [ -d "$NPM_PACKAGES_PATH" ]; then
+  export PATH="$NPM_PACKAGES_PATH:$PATH"
+fi
+
+# Spicetify
+if [ -d "/Users/viz1er/.spicetify" ]; then
+    export PATH="/Users/viz1er/.spicetify:$PATH"
+fi
 
 # Aliases
-alias zshrc='code ~/.config/zsh'
-alias sourcezsh='source ~/.config/zsh/.zshrc'
+alias zshrc='code ~/Codebase/dotfiles/configs/zsh/.zshrc'
+alias sourcezsh='source ~/.zshrc' # Corrected to source the symlink
 alias dotfiles='code ~/Codebase/dotfiles/configs'
 alias exatree='eza --tree --long --icons'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
 alias jwdl='py ~/Codebase/jwplayer-downloader/jwplayer_downloader.py'
+alias ls='eza --long --all --header --git --group-directories-first'
 
 # Key Bindings
 bindkey "^[^[[C" forward-word
@@ -43,26 +50,7 @@ load_nvm() {
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 }
-
-nvm() {
-    load_nvm
-    nvm "$@"
-}
-
-node() {
-    load_nvm
-    node "$@"
-}
-
-npm() {
-    load_nvm
-    npm "$@"
-}
-
-npx() {
-    load_nvm
-    npx "$@"
-}
-
-export PATH=$PATH:/Users/viz1er/.spicetify
-export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"
+nvm() { load_nvm; nvm "$@"; }
+node() { load_nvm; node "$@"; }
+npm() { load_nvm; npm "$@"; }
+npx() { load_nvm; npx "$@"; }
