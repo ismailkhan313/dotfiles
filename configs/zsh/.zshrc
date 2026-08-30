@@ -2,36 +2,23 @@
 # .zshrc config -- viz1er
 # --------------------------------
 
-# Set up Homebrew environment. This should be at the top.
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
 
-# Oh My Zsh Configuration
-export ZSH="$HOME/.config/zsh/.oh-my-zsh"
-ZSH_THEME="avit"
-plugins=(git zsh-autocomplete zsh-syntax-highlighting web-search autojump)
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-source $ZSH/oh-my-zsh.sh
+# Completion
+autoload -Uz compinit && compinit
 
-# Environment Variables
-export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
-export XDG_CONFIG_HOME="$HOME/.config"
-export NVM_DIR="$HOME/.config/nvm"
-export EDITOR="code"
-
-# NPM global packages
-NPM_PACKAGES_PATH="$(npm config get prefix)/bin"
-if [ -d "$NPM_PACKAGES_PATH" ]; then
-  export PATH="$NPM_PACKAGES_PATH:$PATH"
-fi
+# Prompt
+PROMPT='%~ %# '
 
 # Spicetify
-if [ -d "/Users/viz1er/.spicetify" ]; then
-    export PATH="/Users/viz1er/.spicetify:$PATH"
-fi
+[ -d "$HOME/.spicetify" ] && export PATH="$HOME/.spicetify:$PATH"
 
 # Aliases
 alias zshrc='code ~/Codebase/dotfiles/configs/zsh/.zshrc'
-alias sourcezsh='source ~/.zshrc' # Corrected to source the symlink
+alias sourcezsh='source ~/.zshrc'
 alias dotfiles='code ~/Codebase/dotfiles/configs'
 alias exatree='eza --tree --long --icons'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'

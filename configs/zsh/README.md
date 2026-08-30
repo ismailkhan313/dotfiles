@@ -1,14 +1,27 @@
-# ZSH Quick Guide
+# ZSH
 
-Keep all zsh content in ~/.config/zsh and not in the home dir.
-Only keep .zshenv in the home dir.
-Keep zsh history in ~/.cache
+Plain zsh — no framework, no plugins, no symlinks.
 
-.zshenv is sourced before .zprofile, which is sourced before .zshrc
+- `.zshenv` — env vars, sourced by every zsh shell (interactive or not)
+- `.zprofile` — sourced once per login shell (Homebrew, PATH)
+- `.zshrc` — sourced by every interactive shell (history, completion, prompt, aliases, keybindings, NVM lazy-load)
 
+## Usage
 
-## oh my zsh plugins installed
-zsh-autocomplete
-zsh-syntax-highlighting
-web-search - https://github.com/sineto/web-search
-bat - https://github.com/fdellwing/zsh-bat
+These files are **not** symlinked into `~`. They're the source of truth here in the
+repo; the live copies in `~/.zshenv`, `~/.zprofile`, and `~/.zshrc` are independent
+files you copy by hand:
+
+```sh
+# repo -> live
+cp configs/zsh/.zshenv ~/.zshenv
+cp configs/zsh/.zprofile ~/.zprofile
+cp configs/zsh/.zshrc ~/.zshrc
+
+# live -> repo (after tweaking your live config)
+cp ~/.zshenv configs/zsh/.zshenv
+cp ~/.zprofile configs/zsh/.zprofile
+cp ~/.zshrc configs/zsh/.zshrc
+```
+
+Run `sourcezsh` (aliased in `.zshrc`) or open a new shell to pick up changes.

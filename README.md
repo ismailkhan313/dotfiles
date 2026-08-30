@@ -11,7 +11,7 @@ Welcome to my dotfiles repository! Here, you'll find my preferred startup config
 
 - **Fonts**: JetBrains Mono NL & FiraCode.
 - **iTerm2**: Custom profiles and color schemes.
-- **oh-my-zsh**: Configurations, plugins, and scripts for a better Zsh experience.
+- **zsh**: Plain zsh config (no framework) — see `configs/zsh/README.md`.
 
 ## Setup:
 
@@ -34,33 +34,22 @@ a. Import profile settings: - Use the `viz1er.json` file from the `configs/iterm
 
 b. Import color schemes: - Navigate to iTerm2 preferences and import the desired color schemes.
 
-### 3. Integrate oh-my-zsh:
+### 3. Set up zsh:
 
-Boost your Zsh experience with these plugins and configurations.
+Plain zsh, no framework or plugins.
 
 **Location**: `configs/zsh`
 
 **Steps**:
 
-a. Install oh-my-zsh:
-`bash
-    sudo ./install-zsh.sh
-    `
+```bash
+cp configs/zsh/.zshenv ~/.zshenv
+cp configs/zsh/.zprofile ~/.zprofile
+cp configs/zsh/.zshrc ~/.zshrc
+```
 
-b. Install autocomplete plugin:
-`bash
-    sudo git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
-    `
-
-c. Install syntax highlighting plugin:
-`bash
-    sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    `
-
-d. Replace `.zshrc` with my custom configurations:
-`bash
-    cp configs/zsh/.zshrc ~/.zshrc
-    `
+See `configs/zsh/README.md` for details on the file layout and how to sync
+changes back to the repo.
 
 ### 4. Install from Brewfile
 
