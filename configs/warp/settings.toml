@@ -51,7 +51,7 @@ web_search_enabled = true
 write_to_pty = "always_ask"
 
 [appearance]
-spacing = "compact"
+spacing = "normal"
 
 [appearance.text]
 notebook_font_size = 14.0
@@ -129,6 +129,7 @@ custom_secret_regex_list = [
 
 [terminal]
 osc52_clipboard_access = "write_only"
+use_audible_bell = true
 
 [terminal.input]
 alias_expansion_enabled = true
