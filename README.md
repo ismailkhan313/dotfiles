@@ -13,6 +13,8 @@ Welcome to my dotfiles repository! Here, you'll find my preferred startup config
 - **iTerm2**: Custom profiles and color schemes.
 - **zsh**: Plain zsh config (no framework) — see `configs/zsh/README.md`.
 - **Terminal.app**: Always opens maximized — see `configs/terminal/README.md`.
+- **Warp**: Exported `settings.toml` — see `configs/warp/README.md`.
+- **Claude Code**: Global `settings.json` — see `configs/claude/README.md`.
 
 ## Setup:
 
@@ -52,7 +54,34 @@ cp configs/zsh/.zshrc ~/.zshrc
 See `configs/zsh/README.md` for details on the file layout and how to sync
 changes back to the repo.
 
-### 4. Install from Brewfile
+### 4. Set up Warp:
+
+**Location**: `configs/warp`
+
+**Steps**:
+
+```bash
+cp configs/warp/settings.toml ~/.warp/settings.toml
+```
+
+See `configs/warp/README.md` for what's in the file and what's deliberately
+left out.
+
+### 5. Set up Claude Code:
+
+**Location**: `configs/claude`
+
+**Steps**:
+
+```bash
+cp configs/claude/settings.json ~/.claude/settings.json
+cp configs/claude/CLAUDE.md ~/.claude/CLAUDE.md
+```
+
+See `configs/claude/README.md` for what's included and what's deliberately
+left out (conversation history, MCP configs, etc.).
+
+### 6. Install from Brewfile
 
 `brew bundle dump` creates Brewfile in the current directory from currently-installed packages
 Navigate to dotfiles directory (/Codebase/dotfiles/configs)
