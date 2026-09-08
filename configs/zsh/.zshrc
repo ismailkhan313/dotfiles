@@ -26,8 +26,11 @@ alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
 alias jwdl='py ~/Codebase/jwplayer-downloader/jwplayer_downloader.py'
 alias ls='eza --long --all --header --git --group-directories-first'
-alias claude-personal='CLAUDE_CONFIG_DIR=~/.claude-personal claude'
-alias claude-work='CLAUDE_CONFIG_DIR=~/.claude-work claude'
+claude-work() {
+  echo -ne "\033]0;💼 Claude Work\007"
+  CLAUDE_CONFIG_DIR=~/.claude-work claude "$@"
+  echo -ne "\033]0;\007"
+}
 
 # Key Bindings
 bindkey "^[^[[C" forward-word
