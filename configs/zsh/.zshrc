@@ -17,14 +17,14 @@ PROMPT=$'\n%F{yellow}%~%f\n%F{green}❯%f '
 [ -d "$HOME/.spicetify" ] && export PATH="$HOME/.spicetify:$PATH"
 
 # Aliases
-alias zshrc='code ~/Codebase/dotfiles/configs/zsh/.zshrc'
+alias zshrc='code ~/Workspace/dotfiles/configs/zsh/.zshrc'
 alias sourcezsh='source ~/.zshrc'
-alias dotfiles='code ~/Codebase/dotfiles/configs'
+alias dotfiles='code ~/Workspace/dotfiles/configs'
 alias exatree='eza --tree --long --icons=auto'
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 alias storm='open -na "Webstorm.app" --args "$@"'
 alias py='python3'
-alias jwdl='py ~/Codebase/jwplayer-downloader/jwplayer_downloader.py'
+alias jwdl='py ~/Workspace/jwplayer-downloader/jwplayer_downloader.py'
 alias ls='eza --long --all --header --git --group-directories-first'
 claude-work() {
   echo -ne "\033]0;💼 Claude Work\007"
